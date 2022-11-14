@@ -1,0 +1,9 @@
+.card {
+  width: 40%;
+  height: 50px;
+  border: 1px solid pink;
+  .revealed-card {
+    display: flex;
+    justify-content: space-between;
+  }
+}

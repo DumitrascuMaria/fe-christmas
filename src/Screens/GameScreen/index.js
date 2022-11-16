@@ -2,6 +2,7 @@ import React from "react";
 import Board from "../../Components/Board";
 import Footer from "../../Components/Footer";
 import Header from "../../Components/Header";
+import "./index.scss";
 
 const GameScreen = () => {
   return (

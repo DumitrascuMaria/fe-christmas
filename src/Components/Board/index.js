@@ -8,6 +8,7 @@ const Board = () => {
     <div className="board">
       <Question></Question>
       <Cards />
+      <button className="next-btn">Next question</button>
     </div>
   );
 };

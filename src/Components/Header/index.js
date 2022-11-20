@@ -2,12 +2,12 @@ import React from "react";
 import Team from "../../Stories/Team";
 import "./index.scss";
 
-const Header = () => {
+const Header = ({ total }) => {
   return (
     <div className="header">
-      <Team></Team>
-      <button className="current-points">Current Points</button>
-      <Team></Team>
+      <Team total={total}></Team>
+      <button className="current-points">{total}</button>
+      <Team total={total}></Team>
     </div>
   );
 };

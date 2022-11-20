@@ -3,12 +3,17 @@ import Cards from "../Cards";
 import Question from "../Question";
 import "./index.scss";
 
-const Board = () => {
+const Board = ({ question, calcPoints, questionIndex }) => {
   return (
-    <div className="board">
-      <Question></Question>
-      <Cards />
-      <button className="next-btn">Next question</button>
+    <div className="board-container">
+      <div className="board">
+        <Question title={question.question}></Question>
+        <Cards
+          questionIndex={questionIndex}
+          answears={question.answears}
+          calcPoints={calcPoints}
+        />
+      </div>
     </div>
   );
 };

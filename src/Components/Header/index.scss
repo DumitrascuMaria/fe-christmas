@@ -1,23 +1,46 @@
 .header {
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border: 1px solid black;
-    .current-points {
-        align-items: center;
-        background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-        border: 2px solid black;
-        border-radius: 8px;
-        box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-        box-sizing: border-box;
-        color: #FFFFFF;
-        display: flex;
-        font-family: Phantomsans, sans-serif;
-        font-size: 42px;
-        justify-content: center;
-        padding: 10px 15px;
-        cursor: pointer;
-    }
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .current-points {
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(
+      to bottom,
+      #7db9e8 0%,
+      #207cca 49%,
+      #2989d8 50%,
+      #1e5799 100%
+    );
+    border-top: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 0 0 10px hsl(0, 0%, 100%), 0 0 0 20px hsl(237, 85%, 50%);
+    color: rgb(255, 218, 83);
+    // text-shadow: 3px 5px rgb(80, 60, 10);
+    text-shadow: 0 2px 0 #533803, 0 2px 0 #935e10, 0 3px 0 #533803,
+      0 4px 0 rgb(80, 60, 10), 0 5px 0 rgb(80, 60, 10),
+      0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+      0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+      0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+      0 20px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    font-family: Arial Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 90px;
+    // align-items: center;
+    // background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    // border: 2px solid black;
+    // border-radius: 8px;
+    // box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    // box-sizing: border-box;
+    // color: #FFFFFF;
+    // display: flex;
+    // font-family: Phantomsans, sans-serif;
+    // font-size: 42px;
+    // justify-content: center;
+    // padding: 10px 15px;
+    // cursor: pointer;
+  }
 }

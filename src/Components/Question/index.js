@@ -1,10 +1,10 @@
 import React from "react";
 import "./index.scss";
 
-const Question = () => {
+const Question = ({ title }) => {
   return (
     <div className="question">
-      <span>Question?</span>
+      <span>{title}</span>
     </div>
   );
 };

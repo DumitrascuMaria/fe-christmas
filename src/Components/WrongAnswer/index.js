@@ -1,15 +1,22 @@
 import React, { useState } from "react";
-import useAudio from "../../hooks/useAudio";
+import useSound from "use-sound";
+import sound from "../../utils/buzzer.wav";
+
 import "./index.scss";
 const WrongAnswer = () => {
-  const [playing, toggle] = useAudio("src/utils/censor.mp3"); //Uncaught (in promise) DOMException: The element has no supported sources. :(
-
+  const [playSound] = useSound(sound);
+  console.log("modal");
   const [secondIsActive, setSecondIsActive] = useState(false);
   const [lastIsActive, setLastIsActive] = useState(false);
-  
+
   return (
-    <div className="wrongAnswer" onClick={toggle}>
-      <h1 className="active">X</h1>
+    <div className="modal-wrapper" id="modal" onClick={() => playSound()}>
+      <div className="modal-body">
+        <h1>X</h1>
+        <h1>X</h1>
+        <h1>X</h1>
+      </div>
+      {/* <h1 className="active">X</h1>
 
       <h1
         className={secondIsActive ? "active" : ""}
@@ -22,7 +29,7 @@ const WrongAnswer = () => {
         onClick={() => setLastIsActive(true)}
       >
         X
-      </h1>
+      </h1> */}
     </div>
   );
 };

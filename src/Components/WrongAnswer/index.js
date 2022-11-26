@@ -1,20 +1,26 @@
 import React, { useState } from "react";
-import useSound from "use-sound";
-import sound from "../../utils/buzzer.wav";
 
 import "./index.scss";
-const WrongAnswer = () => {
-  const [playSound] = useSound(sound);
-  console.log("modal");
-  const [secondIsActive, setSecondIsActive] = useState(false);
-  const [lastIsActive, setLastIsActive] = useState(false);
-
+const WrongAnswer = ({ count }) => {
   return (
-    <div className="modal-wrapper" id="modal" onClick={() => playSound()}>
+    <div className="modal-wrapper" id="modal">
       <div className="modal-body">
-        <h1>X</h1>
-        <h1>X</h1>
-        <h1>X</h1>
+        {count === 1 ? (
+          <div>&#10060;</div>
+        ) : count === 2 ? (
+          <>
+            <div>&#10060;</div> <div>&#10060;</div>
+          </>
+        ) : count === 3 ? (
+          <>
+            <div>&#10060;</div> <div>&#10060;</div> <div>&#10060;</div>
+          </>
+        ) : (
+          ""
+        )}
+        {/* <h1>X</h1>
+        <h1>X</h1> */}
+        {/* <h1>X</h1> */}
       </div>
       {/* <h1 className="active">X</h1>
 

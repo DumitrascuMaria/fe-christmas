@@ -1,48 +1,54 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import WrongAnswer from "../../Components/WrongAnswer";
 import Board from "../../Components/Board";
 import Footer from "../../Components/Footer";
 import Header from "../../Components/Header";
+import useSound from "use-sound";
+import sound from "../../utils/buzzer.wav";
 import "./index.scss";
 import { questions } from "../../utils/questions";
 
 const GameScreen = () => {
- 
   const [total, setTotal] = useState(0);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [isPressed, setIsPressed] = useState(false);
+  const [countWrongAnswer, setCountWrongAnswer] = useState(0);
+  const [playSound] = useSound(sound);
   const calcPoints = (points) => {
     setTotal((current) => current + points);
   };
+
   const nextQuestion = () => {
     setQuestionIndex((current) => current + 1);
     setIsPressed(false);
     setTotal(0);
+    setCountWrongAnswer(0);
   };
+
   const keyPressFct = (e) => {
     if (e.key === "Escape") {
       setIsPressed(true);
+      playSound();
+      setCountWrongAnswer((current) => current + 1);
     }
+    setTimeout(() => setIsPressed(false), 1000);
   };
-  useEffect(() => {
-    document.addEventListener("keydown", keyPressFct);
 
-    return () => {
-      document.removeEventListener("keydown", keyPressFct);
-    };
-  }, [keyPressFct]);
   console.log("render gamescreen");
   return (
-    <div className="game-screen">
+    <div className="game-screen" onKeyDown={keyPressFct} tabIndex={-1}>
       <Header total={total} />
       <Board
         questionIndex={questionIndex}
         question={questions[questionIndex]}
         calcPoints={calcPoints}
       ></Board>
-      {isPressed && <WrongAnswer />}
+      {isPressed && <WrongAnswer count={countWrongAnswer} />}
 
-      <Footer nextQuestion={nextQuestion}></Footer>
+      <Footer
+        nextQuestion={nextQuestion}
+        countWrongAnswer={countWrongAnswer}
+      ></Footer>
     </div>
   );
 };

@@ -22,6 +22,10 @@ export const questions = [
         text: "Nu poti dormi",
         points: 12,
       },
+      {
+        text: "Telefonul",
+        points: 12,
+      },
     ],
   },
   {

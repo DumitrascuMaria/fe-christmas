@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback } from "react";
+import React, { useState } from "react";
 import WrongAnswer from "../../Components/WrongAnswer";
 import Board from "../../Components/Board";
 import Footer from "../../Components/Footer";
@@ -13,6 +13,7 @@ const GameScreen = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [isPressed, setIsPressed] = useState(false);
   const [countWrongAnswer, setCountWrongAnswer] = useState(0);
+
   const [playSound] = useSound(sound);
   const calcPoints = (points) => {
     setTotal((current) => current + points);
@@ -35,6 +36,7 @@ const GameScreen = () => {
   };
 
   console.log("render gamescreen");
+
   return (
     <div className="game-screen" onKeyDown={keyPressFct} tabIndex={-1}>
       <Header total={total} />

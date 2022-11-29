@@ -1,4 +1,5 @@
 .button {
+  min-width: 200px;
   appearance: none;
   background-color: #ffffff;
   border-radius: 40em;
@@ -33,12 +34,3 @@
   }
 }
 
-.button-disabled {
-  @extend .button;
-  cursor: none;
-  pointer-events: none;
-  border: 2px solid red;
-  &:hover {
-
-  }
-}

@@ -1,4 +1,5 @@
 import React from "react";
+
 import Button from "../../Stories/Button";
 import "./index.scss";
 
@@ -8,12 +9,12 @@ const Footer = ({ isLastRound, nextQuestion, countWrongAnswer }) => {
     tries.push(<div key={countWrongAnswer}>&#10060;</div>);
     countWrongAnswer--;
   }
+
   return (
     <div className="footer">
       <Button
-        text={isLastRound ? "Last Round" : "Next Question"}
+        text={isLastRound ? "Finish" : "Next Question"}
         handleClick={nextQuestion}
-        isLastRound={isLastRound}
       ></Button>
       {tries.length !== 0 && <div className="wrong-tries">{tries}</div>}
     </div>

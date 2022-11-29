@@ -1,4 +1,4 @@
-export const questions = [
+export const firstGame = [
   {
     question: "Numește ceva care te-ar putea trezi în miezul nopții",
     answears: [
@@ -94,6 +94,42 @@ export const questions = [
       },
       {
         text: "Oglindă",
+        points: 2,
+      },
+    ],
+  },
+];
+
+export const secondGame = [
+  {
+    question: "Ce mananca romanii de sarbatori",
+    answears: [
+      {
+        text: "Cozonac",
+        points: 52,
+      },
+      {
+        text: "Toba",
+        points: 15,
+      },
+      {
+        text: "Sarmale",
+        points: 8,
+      },
+      {
+        text: "Pasca",
+        points: 7,
+      },
+      {
+        text: "Salata de Beof",
+        points: 3,
+      },
+      {
+        text: "Tort",
+        points: 2,
+      },
+      {
+        text: "Lebar",
         points: 2,
       },
     ],

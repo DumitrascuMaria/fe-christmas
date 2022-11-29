@@ -2,7 +2,10 @@ import React from "react";
 import "./index.scss";
 const Button = (props) => {
   return (
-    <button className="button" onClick={props.handleClick}>
+    <button
+      className={props.isLastRound ? "button-disabled" : "button"}
+      onClick={props.handleClick}
+    >
       {props.text}
     </button>
   );

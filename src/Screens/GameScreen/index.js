@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import WrongAnswer from "../../Components/WrongAnswer";
 import Board from "../../Components/Board";
 import Footer from "../../Components/Footer";
@@ -35,10 +35,16 @@ const GameScreen = () => {
     setTimeout(() => setIsPressed(false), 1000);
   };
 
-  console.log("render gamescreen");
+  useEffect(() => {
+    document.addEventListener("keydown", keyPressFct);
+
+    return () => {
+      document.removeEventListener("keydown", keyPressFct);
+    };
+  }, [keyPressFct]);
 
   return (
-    <div className="game-screen" onKeyDown={keyPressFct} tabIndex={-1}>
+    <div className="game-screen">
       <Header total={total} />
       <Board
         questionIndex={questionIndex}
@@ -48,6 +54,7 @@ const GameScreen = () => {
       {isPressed && <WrongAnswer count={countWrongAnswer} />}
 
       <Footer
+        isLastRound={questionIndex === questions.length - 1 ? true : false}
         nextQuestion={nextQuestion}
         countWrongAnswer={countWrongAnswer}
       ></Footer>

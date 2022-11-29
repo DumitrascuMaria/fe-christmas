@@ -32,3 +32,13 @@
     transform: scale(1.025);
   }
 }
+
+.button-disabled {
+  @extend .button;
+  cursor: none;
+  pointer-events: none;
+  border: 2px solid red;
+  &:hover {
+
+  }
+}

@@ -7,17 +7,15 @@ const Card = ({ answear, index, calcPoints }) => {
   const [isShown, setIsShown] = useState(false);
   const [hasBorder, setHasBorder] = useState(false);
   const [playSound] = useSound(sound);
-  let style = {};
+
   useEffect(() => {
     setIsShown(false);
-    if (isShown === true) {
-    }
+    setHasBorder(false);
   }, [answear]);
 
   return (
     <div
       className={hasBorder ? "card-border" : "card"}
-      style={style}
       onClick={() => {
         if (!isShown) {
           setTimeout(() => {

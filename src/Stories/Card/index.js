@@ -5,23 +5,23 @@ import sound from "../../utils/correct-answer.wav";
 
 const Card = ({ answear, index, calcPoints }) => {
   const [isShown, setIsShown] = useState(false);
-  const [hasBorder, setHasBorder] = useState(false);
+  //const [hasBorder, setHasBorder] = useState(false);
   const [playSound] = useSound(sound);
 
   useEffect(() => {
     setIsShown(false);
-    setHasBorder(false);
+    //setHasBorder(false);
   }, [answear]);
 
   return (
     <div
-      className={hasBorder ? "card-border" : "card"}
+      className={"card"}
       onClick={() => {
-        if (!isShown) {
-          setTimeout(() => {
-            setHasBorder(true);
-          }, 5000);
-        }
+        // if (!isShown) {
+        //   setTimeout(() => {
+        //     setHasBorder(true);
+        //   }, 5000);
+        // }
         if (isShown === false) playSound();
         setIsShown(true);
       }}
@@ -33,7 +33,6 @@ const Card = ({ answear, index, calcPoints }) => {
             className="points"
             onClick={() => {
               calcPoints(answear.points);
-              setHasBorder(false);
             }}
           >
             {answear.points}
@@ -41,7 +40,14 @@ const Card = ({ answear, index, calcPoints }) => {
         </div>
       ) : (
         <div className="hided-card">
-          <div className="index">{index + 1}</div>
+          <div
+            className="index"
+            onClick={() => {
+              calcPoints(answear.points);
+            }}
+          >
+            {index + 1}
+          </div>
         </div>
       )}
     </div>

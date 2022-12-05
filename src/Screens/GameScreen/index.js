@@ -7,6 +7,7 @@ import useSound from "use-sound";
 import sound from "../../utils/buzzer.wav";
 import "./index.scss";
 import { useLocation } from "react-router-dom";
+import { WinnerBoard } from "../../Stories/WinnerBoard";
 
 const GameScreen = () => {
   const location = useLocation();
@@ -15,6 +16,7 @@ const GameScreen = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [isPressed, setIsPressed] = useState(false);
   const [countWrongAnswer, setCountWrongAnswer] = useState(0);
+  const [isFinished, setIsFinished] = useState(false);
 
   console.log(questions);
   const [playSound] = useSound(sound);
@@ -42,8 +44,9 @@ const GameScreen = () => {
   };
 
   useEffect(() => {
-    const totalData = window.localStorage.getItem("total");
-    const questionIndexData = window.localStorage.getItem("questionIndex");
+    const totalData = window.localStorage.getItem("total") || null;
+    const questionIndexData =
+      window.localStorage.getItem("questionIndex") || null;
     if (totalData !== null) {
       setTotal(+totalData);
     }
@@ -52,20 +55,31 @@ const GameScreen = () => {
     }
   }, []);
 
+  const isLastRound = questionIndex === questions.length - 1 ? true : false;
+
   return (
     <div className="game-screen" onKeyDown={keyPressFct} tabIndex={-1}>
       <Header total={total} />
-      <Board
-        questionIndex={questionIndex}
-        question={questions[questionIndex]}
-        calcPoints={calcPoints}
-      ></Board>
+      {isFinished ? (
+        <WinnerBoard></WinnerBoard>
+      ) : (
+        <>
+          <Board
+            questionIndex={questionIndex}
+            question={questions[questionIndex]}
+            calcPoints={calcPoints}
+          ></Board>
+
+          <Footer
+            isLastRound={isLastRound}
+            nextQuestion={
+              isLastRound ? () => setIsFinished(true) : nextQuestion
+            }
+            countWrongAnswer={countWrongAnswer}
+          ></Footer>
+        </>
+      )}
       {isPressed && <WrongAnswer count={countWrongAnswer} />}
-      <Footer
-        isLastRound={questionIndex === questions.length - 1 ? true : false}
-        nextQuestion={nextQuestion}
-        countWrongAnswer={countWrongAnswer}
-      ></Footer>
     </div>
   );
 };

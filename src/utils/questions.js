@@ -19,10 +19,6 @@ export const firstGame = [
         points: 17,
       },
       {
-        text: "Nu poti dormi",
-        points: 12,
-      },
-      {
         text: "Telefonul",
         points: 12,
       },
@@ -98,38 +94,262 @@ export const firstGame = [
       },
     ],
   },
+  {
+    question:
+      "Ce colind îi cânți lui Moș Crăciun ca să primești ce ți-ai dorit?",
+    answears: [
+      {
+        text: "Moș Crăciun",
+        points: 33,
+      },
+      {
+        text: "O, brad frumos!",
+        points: 20,
+      },
+      {
+        text: "Florile dable",
+        points: 13,
+      },
+      {
+        text: "Steaua sus răsare",
+        points: 10,
+      },
+      {
+        text: "Moșule, ce tânăr ești!",
+        points: 8,
+      },
+      {
+        text: "Dom, Dom să-nălțăm",
+        points: 8,
+      },
+      {
+        text: "Bună dimineața la Moș Ajun",
+        points: 5,
+      },
+      {
+        text: "O, ce veste minunată!",
+        points: 3,
+      },
+    ],
+  },
+  {
+    question: "La petrecerea din grădină, ce floare e în centrul atenției?",
+    answears: [
+      {
+        text: "Trandafirul",
+        points: 57,
+      },
+      {
+        text: "Crin",
+        points: 13,
+      },
+      {
+        text: "Orhidee",
+        points: 11,
+      },
+      {
+        text: "Lalea",
+        points: 6,
+      },
+      {
+        text: "Margaretă",
+        points: 4,
+      },
+      {
+        text: "Zambilă",
+        points: 4,
+      },
+      {
+        text: "Liliac",
+        points: 3,
+      },
+      {
+        text: "Garoafă",
+        points: 2,
+      },
+    ],
+  },
 ];
 
 export const secondGame = [
   {
-    question: "Ce mananca romanii de sarbatori",
+    question: "Cine îi ia locul lui Moș Crăciun dacă acesta pleacă în vacanță",
     answears: [
       {
-        text: "Cozonac",
-        points: 52,
+        text: "Moș Nicolae",
+        points: 35,
       },
       {
-        text: "Toba",
-        points: 15,
+        text: "Iepurașul de Paște",
+        points: 20,
       },
       {
-        text: "Sarmale",
+        text: "Moș Gerilă",
+        points: 12,
+      },
+      {
+        text: "Spiridușul",
+        points: 9,
+      },
+      {
+        text: "Doamna Crăciun",
         points: 8,
       },
       {
-        text: "Pasca",
-        points: 7,
+        text: "Albă ca Zăpada",
+        points: 5,
       },
       {
-        text: "Salata de Beof",
-        points: 3,
+        text: "Superman",
+        points: 4,
+      },
+    ],
+  },
+
+  {
+    question: "Am plecat în grabă și am uitat să închid ____",
+    answears: [
+      {
+        text: "Ușa",
+        points: 23,
       },
       {
-        text: "Tort",
+        text: "Aragazul",
+        points: 20,
+      },
+      {
+        text: "Geamul",
+        points: 17,
+      },
+      {
+        text: "Apa",
+        points: 14,
+      },
+      {
+        text: "Televizorul",
+        points: 12,
+      },
+      {
+        text: "Lumina",
+        points: 10,
+      },
+      {
+        text: "Laptopul",
         points: 2,
       },
       {
-        text: "Lebar",
+        text: "Aerul condiționat",
+        points: 2,
+      },
+    ],
+  },
+  {
+    question: "În afară de suc, ce mai poate avea aromă de portocale?",
+    answears: [
+      {
+        text: "Prăjitură/Tort",
+        points: 30,
+      },
+      {
+        text: "Ceai",
+        points: 12,
+      },
+      {
+        text: "Ciocolată",
+        points: 10,
+      },
+      {
+        text: "Esență",
+        points: 9,
+      },
+      {
+        text: "Sirop",
+        points: 8,
+      },
+      {
+        text: "Lichior",
+        points: 7,
+      },
+      {
+        text: "Bomboană",
+        points: 6,
+      },
+      {
+        text: "Cremă",
+        points: 5,
+      },
+    ],
+  },
+  {
+    question: "Ce faci intr-o călătorie lungă cu trenul?",
+    answears: [
+      {
+        text: "Citesc",
+        points: 45,
+      },
+      {
+        text: "Dorm",
+        points: 31,
+      },
+      {
+        text: "Acult muzică",
+        points: 6,
+      },
+      {
+        text: "Integrame",
+        points: 14,
+      },
+      {
+        text: "Admir peisajul",
+        points: 5,
+      },
+      {
+        text: "Mănânc",
+        points: 4,
+      },
+      {
+        text: "Mă joc pe telefon",
+        points: 2,
+      },
+      {
+        text: "Socializez",
+        points: 2,
+      },
+    ],
+  },
+  {
+    question: "Cu ce te prinde miezul nopții în mână de Anul Nou?",
+    answears: [
+      {
+        text: "Cu paharul plin",
+        points: 39,
+      },
+      {
+        text: "Cu banii",
+        points: 17,
+      },
+      {
+        text: "Cu telefonul",
+        points: 12,
+      },
+      {
+        text: "Cu artificii",
+        points: 9,
+      },
+      {
+        text: "Cu șampania",
+        points: 7,
+      },
+      {
+        text: "Cu mâna iubitei",
+        points: 5,
+      },
+      {
+        text: "Cu farfuria plină",
+        points: 3,
+      },
+      {
+        text: "Cu mâna copilului",
         points: 2,
       },
     ],

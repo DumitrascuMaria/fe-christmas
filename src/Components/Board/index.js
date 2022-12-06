@@ -7,7 +7,10 @@ const Board = ({ question, calcPoints, questionIndex }) => {
   return (
     <div className="board-container">
       <div className="board">
-        <Question title={question.question}></Question>
+        <Question
+          title={question.question}
+          questionIndex={questionIndex}
+        ></Question>
         <Cards
           questionIndex={questionIndex}
           answears={question.answears}

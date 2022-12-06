@@ -22,7 +22,7 @@ const GameScreen = () => {
   const [playSound] = useSound(sound);
   const calcPoints = (points) => {
     setTotal((current) => current + points);
-    localStorage.setItem("total", total + points);
+    sessionStorage.setItem("total", total + points);
   };
 
   const nextQuestion = () => {
@@ -30,8 +30,9 @@ const GameScreen = () => {
     setIsPressed(false);
     setTotal(0);
     setCountWrongAnswer(0);
-    localStorage.setItem("questionIndex", questionIndex + 1);
-    localStorage.removeItem("total");
+    sessionStorage.setItem("questionIndex", questionIndex + 1);
+    sessionStorage.removeItem("total");
+    sessionStorage.removeItem("wrongAnswers");
   };
 
   const keyPressFct = (e) => {
@@ -39,19 +40,24 @@ const GameScreen = () => {
       setIsPressed(true);
       playSound();
       setCountWrongAnswer((current) => current + 1);
+      sessionStorage.setItem("wrongAnswers", countWrongAnswer + 1);
     }
     setTimeout(() => setIsPressed(false), 1000);
   };
 
   useEffect(() => {
-    const totalData = window.localStorage.getItem("total") || null;
+    const totalData = window.sessionStorage.getItem("total") || null;
     const questionIndexData =
-      window.localStorage.getItem("questionIndex") || null;
+      window.sessionStorage.getItem("questionIndex") || null;
+    const wrongAnswers = window.sessionStorage.getItem("wrongAnswers") || null;
     if (totalData !== null) {
       setTotal(+totalData);
     }
     if (questionIndexData !== null) {
       setQuestionIndex(+questionIndexData);
+    }
+    if (wrongAnswers !== null) {
+      setCountWrongAnswer(+wrongAnswers);
     }
   }, []);
 

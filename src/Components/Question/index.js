@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./index.scss";
 
 const Question = ({ title }) => {
+  const [showText, setShowText] = useState(false);
+  useEffect(() => {
+    setShowText(false);
+  }, [title]);
   return (
-    <div className="question">
-      <span>{title}</span>
+    <div className="question" onClick={() => setShowText(true)}>
+      {showText && <span>{title}</span>}
     </div>
   );
 };

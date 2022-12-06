@@ -5,19 +5,19 @@ import "./index.scss";
 export const WinnerBoard = () => {
   const [winnerTeam, setWinnerTeam] = useState("");
   useEffect(() => {
-    const pointsTeam1 = window.localStorage.getItem("points-team1");
-    const pointsTeam2 = window.localStorage.getItem("points-team2");
+    const pointsTeam1 = window.sessionStorage.getItem("points-team1");
+    const pointsTeam2 = window.sessionStorage.getItem("points-team2");
     if (pointsTeam1 !== null && pointsTeam2 !== null) {
-      if (+pointsTeam1 > +pointsTeam2) setWinnerTeam("The winner is team1");
-      else setWinnerTeam("The Winner is team2");
+      if (+pointsTeam1 > +pointsTeam2) setWinnerTeam("Code Warriors");
+      else if (+pointsTeam1 < +pointsTeam2) setWinnerTeam("Ctrl Alt Defeat");
+      else setWinnerTeam("Everybody");
     } else {
-      setWinnerTeam(
-        `The winner is ${pointsTeam1 !== null ? "team1" : "team2"}`
-      );
+      setWinnerTeam("Everybody");
     }
   }, []);
   return (
     <div className="winner-board">
+      <h1>The winner is </h1>
       <h1>
         &#11088;{winnerTeam}
         &#11088;

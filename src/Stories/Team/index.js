@@ -3,7 +3,7 @@ import useSound from "use-sound";
 import sound from "../../utils/increase-points.wav";
 import "./index.scss";
 
-const Team = ({ onClick, points }) => {
+const Team = ({ onClick, points, name }) => {
   const [playSound] = useSound(sound);
 
   return (
@@ -14,7 +14,7 @@ const Team = ({ onClick, points }) => {
         playSound();
       }}
     >
-      <div className="team-name">Team name</div>
+      <div className="team-name">{name}</div>
       <div className="team-points">{points}</div>
     </div>
   );

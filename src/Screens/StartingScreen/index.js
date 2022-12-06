@@ -4,7 +4,7 @@ import Button from "../../Stories/Button";
 import { firstGame, secondGame } from "../../utils/questions";
 import "./index.scss";
 const StartingScreen = () => {
-  localStorage.clear();
+  
   return (
     <div className="starting-screen">
       <div className="actions-div">

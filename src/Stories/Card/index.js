@@ -9,21 +9,19 @@ const Card = ({ answear, index, calcPoints }) => {
   const [playSound] = useSound(sound);
 
   useEffect(() => {
-    setIsShown(false);
-    //setHasBorder(false);
+    const isRevealed = sessionStorage.getItem(`card-${index}`) || null;
+    console.log(isRevealed);
+    if (isRevealed !== null && isRevealed === "true") setIsShown(true);
+    else setIsShown(false);
   }, [answear]);
 
   return (
     <div
       className={"card"}
       onClick={() => {
-        // if (!isShown) {
-        //   setTimeout(() => {
-        //     setHasBorder(true);
-        //   }, 5000);
-        // }
         if (isShown === false) playSound();
         setIsShown(true);
+        sessionStorage.setItem(`card-${index}`, true);
       }}
     >
       {isShown ? (

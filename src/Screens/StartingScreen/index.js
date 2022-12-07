@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../Stories/Button";
-import { firstGame, secondGame } from "../../utils/questions";
+import { firstGame, secondGame, thirdGame } from "../../utils/questions";
 import "./index.scss";
 const StartingScreen = () => {
-  
   return (
     <div className="starting-screen">
       <div className="actions-div">
@@ -13,6 +12,9 @@ const StartingScreen = () => {
         </Link>
         <Link to="game" state={secondGame}>
           <Button text="Play Second Game" />
+        </Link>
+        <Link to="game" state={thirdGame}>
+          <Button text="Play Third Game" />
         </Link>
       </div>
     </div>

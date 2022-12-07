@@ -11,9 +11,10 @@ export const WinnerBoard = () => {
       if (+pointsTeam1 > +pointsTeam2) setWinnerTeam("Code Warriors");
       else if (+pointsTeam1 < +pointsTeam2) setWinnerTeam("Ctrl Alt Defeat");
       else setWinnerTeam("Everybody");
-    } else {
+    } else if (pointsTeam1 !== null) setWinnerTeam("Code Warriors");
+    else setWinnerTeam("Ctrl Alt Defeat");
+    if (pointsTeam1 === null && pointsTeam2 === null)
       setWinnerTeam("Everybody");
-    }
   }, []);
   return (
     <div className="winner-board">

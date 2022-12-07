@@ -1,6 +1,6 @@
 export const firstGame = [
   {
-    question: "Numește ceva care te-ar putea trezi în miezul nopții",
+    question: "Numește ceva care te-ar putea trezi în miezul nopții?",
     answears: [
       {
         text: "Zgomot",
@@ -11,11 +11,11 @@ export const firstGame = [
         points: 24,
       },
       {
-        text: "Ti-e sete",
+        text: "Ți-e sete",
         points: 20,
       },
       {
-        text: "Nevoie la toaleta",
+        text: "Nevoie la toaletă",
         points: 17,
       },
       {
@@ -25,14 +25,51 @@ export const firstGame = [
     ],
   },
   {
-    question: "Ce face bunica din faină",
+    question: "Ce scuză folosești când nu ți-ai făcut tema?",
+    answears: [
+      {
+        text: "Am uitat să o fac",
+        points: 38,
+      },
+      {
+        text: "Am fost bolnav",
+        points: 22,
+      },
+      {
+        text: "Am lăsat caietul acasă",
+        points: 10,
+      },
+      {
+        text: "N-am avut timp",
+        points: 9,
+      },
+      {
+        text: "N-am știut",
+        points: 7,
+      },
+      {
+        text: "A mâncat-o câinele",
+        points: 6,
+      },
+      {
+        text: "N-am avut curent",
+        points: 4,
+      },
+      {
+        text: "Am adormit",
+        points: 4,
+      },
+    ],
+  },
+  {
+    question: "Ce face bunica din făină?",
     answears: [
       {
         text: "Pâine",
         points: 30,
       },
       {
-        text: "Gogosi",
+        text: "Gogoși",
         points: 19,
       },
       {
@@ -74,23 +111,23 @@ export const firstGame = [
       },
       {
         text: "Ceas",
+        points: 12,
+      },
+      {
+        text: "Icoană",
         points: 8,
       },
       {
-        text: "Icoana",
-        points: 7,
-      },
-      {
         text: "Cuier",
-        points: 3,
+        points: 6,
       },
       {
         text: "Calendar",
-        points: 2,
+        points: 4,
       },
       {
         text: "Oglindă",
-        points: 2,
+        points: 3,
       },
     ],
   },
@@ -169,6 +206,35 @@ export const firstGame = [
       },
     ],
   },
+  {
+    question: "Ce este mai bun fierbinte decât rece?",
+    answears: [
+      {
+        text: "Ceai",
+        points: 42,
+      },
+      {
+        text: "Cafea",
+        points: 34,
+      },
+      {
+        text: "Ciorbă",
+        points: 11,
+      },
+      {
+        text: "Ciocolată caldă",
+        points: 8,
+      },
+      {
+        text: "Vin fiert",
+        points: 3,
+      },
+      {
+        text: "Pizza",
+        points: 2,
+      },
+    ],
+  },
 ];
 
 export const secondGame = [
@@ -189,15 +255,15 @@ export const secondGame = [
       },
       {
         text: "Spiridușul",
-        points: 9,
+        points: 12,
       },
       {
         text: "Doamna Crăciun",
-        points: 8,
+        points: 10,
       },
       {
         text: "Albă ca Zăpada",
-        points: 5,
+        points: 7,
       },
       {
         text: "Superman",
@@ -252,11 +318,11 @@ export const secondGame = [
       },
       {
         text: "Ceai",
-        points: 12,
+        points: 18,
       },
       {
         text: "Ciocolată",
-        points: 10,
+        points: 15,
       },
       {
         text: "Esență",
@@ -272,11 +338,11 @@ export const secondGame = [
       },
       {
         text: "Bomboană",
-        points: 6,
+        points: 7,
       },
       {
         text: "Cremă",
-        points: 5,
+        points: 6,
       },
     ],
   },
@@ -297,11 +363,11 @@ export const secondGame = [
       },
       {
         text: "Integrame",
-        points: 14,
+        points: 5,
       },
       {
         text: "Admir peisajul",
-        points: 5,
+        points: 4,
       },
       {
         text: "Mănânc",
@@ -309,7 +375,7 @@ export const secondGame = [
       },
       {
         text: "Mă joc pe telefon",
-        points: 2,
+        points: 3,
       },
       {
         text: "Socializez",
@@ -326,11 +392,11 @@ export const secondGame = [
       },
       {
         text: "Cu banii",
-        points: 17,
+        points: 20,
       },
       {
         text: "Cu telefonul",
-        points: 12,
+        points: 15,
       },
       {
         text: "Cu artificii",
@@ -351,6 +417,323 @@ export const secondGame = [
       {
         text: "Cu mâna copilului",
         points: 2,
+      },
+    ],
+  },
+  {
+    question: "Cum poți rămâne fără bani?",
+    answears: [
+      {
+        text: "Jocuri de noroc",
+        points: 23,
+      },
+      {
+        text: "Nuntă",
+        points: 21,
+      },
+      {
+        text: "Vacanță",
+        points: 17,
+      },
+      {
+        text: "Cumpărături",
+        points: 15,
+      },
+      {
+        text: "Petreceri",
+        points: 10,
+      },
+      {
+        text: "Furt",
+        points: 8,
+      },
+      {
+        text: "Pierderea locului de muncă",
+        points: 6,
+      },
+    ],
+  },
+  {
+    question: "Ce nu ai vrea să găsești în cortul tău?",
+    answears: [
+      {
+        text: "Un urs",
+        points: 34,
+      },
+      {
+        text: "Un șarpe",
+        points: 28,
+      },
+      {
+        text: "Țânțari",
+        points: 13,
+      },
+      {
+        text: "Gândaci",
+        points: 10,
+      },
+      {
+        text: "Furnici",
+        points: 8,
+      },
+      {
+        text: "Gunoaie / Mizerie",
+        points: 4,
+      },
+      {
+        text: "Șopârle",
+        points: 3,
+      },
+    ],
+  },
+];
+
+export const thirdGame = [
+  {
+    question: "Ce crește mai repede decât ți-ai dori?",
+    answears: [
+      {
+        text: "Copilul",
+        points: 45,
+      },
+      {
+        text: "Părul",
+        points: 19,
+      },
+      {
+        text: "Animalul de companie",
+        points: 13,
+      },
+      {
+        text: "Masa corporală",
+        points: 12,
+      },
+      {
+        text: "Prețurile / Inflația",
+        points: 5,
+      },
+      {
+        text: "Cursul valutar",
+        points: 3,
+      },
+      {
+        text: "Temperatura globală",
+        points: 3,
+      },
+    ],
+  },
+
+  {
+    question: "Ce apare scris pe o foaie de examen?",
+    answears: [
+      {
+        text: "Subiecte / Întrebări",
+        points: 37,
+      },
+      {
+        text: "Nota",
+        points: 28,
+      },
+      {
+        text: "Numele și prenumele",
+        points: 16,
+      },
+      {
+        text: "Data",
+        points: 8,
+      },
+      {
+        text: "Disciplina / Cursul",
+        points: 4,
+      },
+      {
+        text: "Denumirea instituției",
+        points: 3,
+      },
+      {
+        text: "Localitatea",
+        points: 2,
+      },
+      {
+        text: "Punctajul / Baremul",
+        points: 2,
+      },
+    ],
+  },
+  {
+    question: "Ce emoție poate transmite cineva printr-o simplă privire?",
+    answears: [
+      {
+        text: "Tristețe",
+        points: 30,
+      },
+      {
+        text: "Bucurie / Veselie",
+        points: 21,
+      },
+      {
+        text: "Iubire",
+        points: 15,
+      },
+      {
+        text: "Uimire",
+        points: 13,
+      },
+      {
+        text: "Furie",
+        points: 7,
+      },
+      {
+        text: "Milă",
+        points: 5,
+      },
+      {
+        text: "Teamă",
+        points: 5,
+      },
+      {
+        text: "Entuziasm",
+        points: 4,
+      },
+    ],
+  },
+  {
+    question: "Ce meserie ai dacă îți petreci majoritatea timpului pe scenă?",
+    answears: [
+      {
+        text: "Actor",
+        points: 30,
+      },
+      {
+        text: "Vocalist",
+        points: 21,
+      },
+      {
+        text: "Dansator",
+        points: 19,
+      },
+      {
+        text: "Comediant",
+        points: 17,
+      },
+      {
+        text: "Instrumentist",
+        points: 5,
+      },
+      {
+        text: "DJ",
+        points: 3,
+      },
+      {
+        text: "Prezentator",
+        points: 3,
+      },
+      {
+        text: "Magician",
+        points: 2,
+      },
+    ],
+  },
+  {
+    question: "La ce sărbătoare nu trebuie să aduci cadouri?",
+    answears: [
+      {
+        text: "Paște",
+        points: 29,
+      },
+      {
+        text: "1 Decembrie",
+        points: 25,
+      },
+      {
+        text: "Revelion",
+        points: 24,
+      },
+      {
+        text: "1 Mai",
+        points: 11,
+      },
+      {
+        text: "Halloween",
+        points: 5,
+      },
+      {
+        text: "Ziua orașului",
+        points: 4,
+      },
+      {
+        text: "Rusalii",
+        points: 2,
+      },
+    ],
+  },
+  {
+    question: "Cine trebuie să lucreze în noaptea de Anul Nou?",
+    answears: [
+      {
+        text: "Ospătar",
+        points: 39,
+      },
+      {
+        text: "Polițist",
+        points: 25,
+      },
+      {
+        text: "Doctor",
+        points: 15,
+      },
+      {
+        text: "Șofer RATB / Taxi",
+        points: 10,
+      },
+      {
+        text: "Bucătar",
+        points: 7,
+      },
+      {
+        text: "Cântăreț / Lăutar",
+        points: 2,
+      },
+      {
+        text: "Pompierii",
+        points: 2,
+      },
+    ],
+  },
+  {
+    question: "Ce animal își folosește mult coada?",
+    answears: [
+      {
+        text: "Pisica",
+        points: 40,
+      },
+      {
+        text: "Câinele",
+        points: 22,
+      },
+      {
+        text: "Maimuța",
+        points: 12,
+      },
+      {
+        text: "Veverița",
+        points: 7,
+      },
+      {
+        text: "Cangur",
+        points: 6,
+      },
+      {
+        text: "Vacă",
+        points: 5,
+      },
+      {
+        text: "Cal",
+        points: 4,
+      },
+      {
+        text: "Scorpion",
+        points: 4,
       },
     ],
   },

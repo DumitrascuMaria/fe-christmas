@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../../Stories/Card";
 import "./index.scss";
 
-const Cards = ({ answears, calcPoints }) => {
+const Cards = ({ answears, calcPoints, questionIndex }) => {
   let firstColumn = [];
   let secondColumn = [];
 
@@ -10,7 +10,7 @@ const Cards = ({ answears, calcPoints }) => {
     if (i < 4) {
       firstColumn.push(
         <Card
-          key={i}
+          key={`${questionIndex}-card-${i}`}
           answear={answears[i]}
           index={i}
           calcPoints={calcPoints}
@@ -19,7 +19,7 @@ const Cards = ({ answears, calcPoints }) => {
     } else
       secondColumn.push(
         <Card
-          key={i}
+          key={`${questionIndex}-card-${i}`}
           answear={answears[i]}
           index={i}
           calcPoints={calcPoints}

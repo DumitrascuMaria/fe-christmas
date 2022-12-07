@@ -25,14 +25,22 @@ const GameScreen = () => {
     sessionStorage.setItem("total", total + points);
   };
 
+  const clearSession = () => {
+    sessionStorage.setItem("questionIndex", questionIndex + 1);
+    sessionStorage.removeItem("total");
+    sessionStorage.removeItem("wrongAnswers");
+    for (let i = 0; i < questions[questionIndex].answears.length; i++) {
+      sessionStorage.removeItem(`card-${i}`);
+    }
+    sessionStorage.removeItem("showQuestion");
+  };
+
   const nextQuestion = () => {
     setQuestionIndex((current) => current + 1);
     setIsPressed(false);
     setTotal(0);
     setCountWrongAnswer(0);
-    sessionStorage.setItem("questionIndex", questionIndex + 1);
-    sessionStorage.removeItem("total");
-    sessionStorage.removeItem("wrongAnswers");
+    clearSession();
   };
 
   const keyPressFct = (e) => {
